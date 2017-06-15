@@ -7,9 +7,9 @@
 static krb5_error_code check(krb5_context ctx,
 			     krb5_pwqual_moddata data,
 			     const char *password,
-			     const char *policy_name UNUSED,
+			     const char *policy_name,
 			     krb5_principal princ,
-			     const char **languages UNUSED)
+			     const char **languages)
 {
   /* Debian's zxcvbn-c claims that the dictionary is included in the object
      compiled from zxcvbn.c; hence we don't need to call ZxcvbnInit() or ZxxcvbnUnItit().
@@ -31,7 +31,7 @@ static krb5_error_code check(krb5_context ctx,
 
 krb5_error_code pwqual_zxcvbn_kerb_initvt(krb5_context context,
 					  int maj_ver,
-					  int min_ver UNUSED,
+					  int min_ver,
 					  krb5_plugin_vtable vtable)
 {
   krb5_pwqual_vtable vt;
