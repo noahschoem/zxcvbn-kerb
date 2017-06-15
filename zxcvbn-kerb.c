@@ -1,6 +1,7 @@
 #include <krb5/krb5.h>
 #include <krb5/plugin.h>
-#include <kadm5/kadm5.h>
+#include <kadm5/admin.h>
+#include <kadm5/kadm_err.h>
 #include <zxcvbn.h>
 
 static krb5_error_code check(krb5_context ctx,
