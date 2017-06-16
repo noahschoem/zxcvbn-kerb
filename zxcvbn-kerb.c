@@ -1,8 +1,8 @@
 #include <krb5/krb5.h>
 #include <krb5/plugin.h>
+#include <krb5/pwqual_plugin.h>
 #include <kadm5/admin.h>
 #include <kadm5/kadm_err.h>
-#include <kadm5/pwqual.h>
 #include <zxcvbn.h>
 
 static krb5_error_code check(krb5_context ctx,
